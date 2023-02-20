@@ -24,4 +24,3 @@ jika anda memilih beberapa opsi di bawah ada beberapa requirement yang harus di 
 <code>sudo ./index.sh</code> <br>
 
 ===========================================================================
-Sekian Dari saya Terimakasih
