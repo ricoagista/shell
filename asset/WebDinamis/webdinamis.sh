@@ -20,7 +20,7 @@ service apache2 start
 
 
 # Clone the web-dinamis-produktif repository to /var/www/
-cd /var/www/html/ && git clone https://github.com/ricoagsta/absensi
+cd /var/www/html/ && git clone https://github.com/iniciloo/absensi.git
 
 # Give permission to access asset directory and index.php file
 chmod 777 -R /var/www/html/
