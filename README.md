@@ -17,7 +17,7 @@ jika anda memilih beberapa opsi di bawah ada beberapa requirement yang harus di 
 2. Clone repo ke github <br>
 <code>git clone https://github.com/ricoagsta/shell.git</code> <br>
 3. Masuk Ke directory shell <br> 
-<code>cd /shell</code> <br>
+<code>cd shell</code> <br>
 4. Beri Akses index untuk boot di dalam instance <br>
 <code>chmod +x index.sh</code> <br>
 5. Running Apps dengan perintah <br>
