@@ -50,10 +50,10 @@ echo "Masukkan Password RDS anda: "
 read password_rds
 
 # Modify the file koneksi.php to use the RDS database
-sed -i "s/localhost/$rds_endpoint/g" /var/www/absensi/config/db.php
-sed -i "s/root/$username_rds/g" /var/www/absensi/config/db.php
-sed -i "s/\"\"/\"$password_rds\"/g" /var/www/absensi/config/db.php
-sed -i "s/db/absensi/g" /var/www/absensi/config/db.php
+sed -i "s/localhost/$rds_endpoint/g" /var/www/html/absensi/config/db.php
+sed -i "s/root/$username_rds/g" /var/www/absensi/html/config/db.php
+sed -i "s/\"\"/\"$password_rds\"/g" /var/www/html/absensi/config/db.php
+sed -i "s/db/absensi/g" /var/www/absensi/html/config/db.php
 
 # Check if the modification was successful
 if [ $? -eq 0 ]; then
