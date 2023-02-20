@@ -15,7 +15,7 @@ jika anda memilih beberapa opsi di bawah ada beberapa requirement yang harus di 
 1. Pertama-tama silahkan login sebagai administrator dengan mengetikkan <br>
 <code>sudo su</code><br>
 2. Clone repo ke github <br>
-<code>git clone https://github.com/ricoagsta/shell</code> <br>
+<code>git clone https://github.com/ricoagsta/shell.git</code> <br>
 3. Masuk Ke directory shell <br> 
 <code>cd /shell</code> <br>
 4. Beri Akses index untuk boot di dalam instance <br>
