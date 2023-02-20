@@ -14,13 +14,14 @@ banner="########################################################################
 echo "$banner"
 sleep 2
 # Update the package list and install Apache2, PHP, PHP MySQLi, Git, and MariaDB
+apt-get update -y
 apt-get install apache2 unzip php php-mysqli php-mysql git mariadb-server -y
+
 # Start Apache2 service
 service apache2 start
 
-
 # Clone the web-dinamis-produktif repository to /var/www/
-cd /var/www/ && git clone https://github.com/ricoagsta/absensi
+cd /var/www/ && git clone https://github.com/ricoagsta/absensi.git
 
 # Give permission to access asset directory and index.php file
 chmod 777 -R /var/www/
