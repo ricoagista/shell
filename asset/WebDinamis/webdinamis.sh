@@ -51,7 +51,7 @@ read password_rds
 
 # Modify the file koneksi.php to use the RDS database
 sed -i "s/localhost/$rds_endpoint/g" /var/www/html/absensi/config/db.php
-sed -i "s/root/$username_rds/g" /var/www/absensi/html/config/db.php
+sed -i "s/root/$username_rds/g" /var/www/html/absensi/config/db.php
 sed -i "s/\"\"/\"$password_rds\"/g" /var/www/html/absensi/config/db.php
 sed -i "s/db/absensi/g" /var/www/html/absensi/html/config/db.php
 
@@ -76,7 +76,7 @@ create database absensi;
 use absensi;
 
 # Import the SQL script to create tables and populate data
-source /var/www/absensi/database/db_rico.sql
+source /var/www/html/absensi/database/db_rico.sql
 
 # Show tables in the absensi database
 show tables;
@@ -96,4 +96,4 @@ sudo nano /ebs-ubuntu/ubuntu.txt
 sudo mkdir /mnt/efs/fs1/ubuntu
 cd /mnt/efs/fs1/
 
-sudo rsync -avR --stats /var/www/absensi /ebs-ubuntu
+sudo rsync -avR --stats /var/www/html/absensi /ebs-ubuntu
