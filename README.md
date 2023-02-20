@@ -14,14 +14,14 @@ jika anda memilih beberapa opsi di bawah ada beberapa requirement yang harus di 
 # Cara-pengunaan
 1. Pertama-tama silahkan login sebagai administrator dengan mengetikkan <br>
 <code>sudo su</code><br>
-2. Clone repo ke github
-<code>git clone https://github.com/ricoagsta/shell</code
-3. Masuk Ke directory shell 
-<code>cd /shell</code>
-4. Beri Akses index untuk boot di dalam instance
-<code>chmod +x index.sh</code>
-5. Running Apps dengan perintah
-<code>sudo ./index.sh</code>
+2. Clone repo ke github <br>
+<code>git clone https://github.com/ricoagsta/shell</code> <br>
+3. Masuk Ke directory shell <br> 
+<code>cd /shell</code> <br>
+4. Beri Akses index untuk boot di dalam instance <br>
+<code>chmod +x index.sh</code> <br>
+5. Running Apps dengan perintah <br>
+<code>sudo ./index.sh</code> <br>
 
 ===========================================================================
 Sekian Dari saya Terimakasih
