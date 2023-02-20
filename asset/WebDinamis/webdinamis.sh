@@ -20,10 +20,12 @@ service apache2 start
 
 
 # Clone the web-dinamis-produktif repository to /var/www/
-cd /var/www/ && git clone https://github.com/iniciloo/absensi.git
+cd /var/www/ && git clone https://github.com/ricoagsta/absensi
 
 # Give permission to access asset directory and index.php file
 chmod 777 -R /var/www/
+
+cd /var/www/absensi/ && unzip absensi.zip 
 
 # Replace the default Apache2 configuration with the custom configuration
 cd /etc/apache2/sites-available/
