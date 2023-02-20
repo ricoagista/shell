@@ -24,9 +24,4 @@ jika anda memilih beberapa opsi di bawah ada beberapa requirement yang harus di 
 <code>sudo ./index.sh</code>
 
 ===========================================================================
-Sekian Dari saya Terimakasih 
-
-original by <a href="https://github.com/OmTegar">, Reedit <a href="https://github.com/OmTegar">OmTegar</a> https://github.com/ricoagsta
-
-
-
+Sekian Dari saya Terimakasih
