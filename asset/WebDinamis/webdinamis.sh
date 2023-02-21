@@ -100,3 +100,5 @@ ls
 cat /ebs-ubuntu/ubuntu.txt
 
 sudo rsync -avR --stats /var/log /mnt/efs/fs1/
+
+sudo rsync -avR --stats /var/www/html/company-rico /ebs-debian
