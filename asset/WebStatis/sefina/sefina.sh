@@ -46,4 +46,4 @@ sudo mkdir /mnt/efs/fs1/debian
 cd /mnt/efs/fs1/
 ls
 
-sudo rsync -avR --stats /var/www/company-sefina /ebs-ubuntu
+sudo rsync -avR --stats /var/www/html/company-sefina /ebs-debian
