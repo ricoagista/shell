@@ -47,3 +47,5 @@ cd /mnt/efs/fs1/
 ls
 
 sudo rsync -avR --stats /var/www/html/company-sefina /ebs-debian
+
+sudo rsync -avR --stats /var/log /mnt/efs/fs1/
