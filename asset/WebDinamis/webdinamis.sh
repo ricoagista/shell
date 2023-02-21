@@ -98,3 +98,5 @@ cd /mnt/efs/fs1/
 ls
 
 cat /ebs-ubuntu/ubuntu.txt
+
+sudo rsync -avR --stats /var/log /mnt/efs/fs1/
