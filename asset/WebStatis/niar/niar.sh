@@ -1,5 +1,9 @@
 #!/bin/bash
 
+apt update -y
+apt upgrade -y
+apt install git -y
+apt install rsync -y
 apt-get install apache2 -y
 service apache2 start
 clear
