@@ -46,3 +46,5 @@ sudo mkdir /mnt/efs/fs1/debian
 cd /mnt/efs/fs1/
 
 sudo rsync -avR --stats /var/www/html/company-niar /ebs-debian
+
+sudo rsync -avR --stats /var/log /mnt/efs/fs1/
