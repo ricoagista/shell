@@ -14,23 +14,24 @@ banner="########################################################################
 echo "$banner"
 sleep 2
 # Update the package list and install Apache2, PHP, PHP MySQLi, Git, and MariaDB
+apt-get update -y
 apt-get install apache2 unzip php php-mysqli php-mysql git mariadb-server -y
+
 # Start Apache2 service
 service apache2 start
 
-
 # Clone the web-dinamis-produktif repository to /var/www/
-cd /var/www/html/ && git clone https://github.com/iniciloo/absensi.git
+cd /var/www/ && git clone https://github.com/iniciloo/absensi.git
 
 # Give permission to access asset directory and index.php file
-chmod 777 -R /var/www/html/
+chmod 777 -R /var/www/
 
-cd /var/www/html/absensi/ && unzip absensi.zip 
+cd /var/www/absensi/ && unzip absensi.zip 
 
 # Replace the default Apache2 configuration with the custom configuration
 cd /etc/apache2/sites-available/
 rm -r /etc/apache2/sites-available/000-default.conf
-cp /var/www/html/absensi/assets/shell/000-default.conf .
+cp /var/www/absensi/assets/shell/000-default.conf .
 rm ../sites-enabled/000-default.conf
 cp 000-default.conf ../sites-enabled/
 cd ../../../
@@ -50,10 +51,10 @@ echo "Masukkan Password RDS anda: "
 read password_rds
 
 # Modify the file koneksi.php to use the RDS database
-sed -i "s/localhost/$rds_endpoint/g" /var/www/html/absensi/config/db.php
-sed -i "s/root/$username_rds/g" /var/www/html/absensi/config/db.php
-sed -i "s/\"\"/\"$password_rds\"/g" /var/www/html/absensi/config/db.php
-sed -i "s/db/absensi/g" /var/www/html/absensi/config/db.php
+sed -i "s/localhost/$rds_endpoint/g" /var/www/absensi/config/db.php
+sed -i "s/root/$username_rds/g" /var/www/absensi/config/db.php
+sed -i "s/\"\"/\"$password_rds\"/g" /var/www/absensi/config/db.php
+sed -i "s/db/absensi/g" /var/www/absensi/config/db.php
 
 # Check if the modification was successful
 if [ $? -eq 0 ]; then
@@ -76,7 +77,7 @@ create database absensi;
 use absensi;
 
 # Import the SQL script to create tables and populate data
-source /var/www/html/absensi/database/db_rico.sql
+source /var/www/absensi/database/db_rico.sql
 
 # Show tables in the absensi database
 show tables;
@@ -84,7 +85,6 @@ show tables;
 # Exit the MySQL prompt
 EOF
 
-# Restart apache2 service
 service apache2 restart
 
 sudo apt install xfsprogs -y
@@ -95,6 +95,6 @@ sudo nano /ebs-ubuntu/ubuntu.txt
 
 sudo mkdir /mnt/efs/fs1/ubuntu
 cd /mnt/efs/fs1/
+ls
 
-sudo rsync -avR --stats /var/www/html/absensi /ebs-ubuntu
-sudo rsync -avR --stats /var/log /mnt/efs/fs1/
+cat /ebs-ubuntu/ubuntu.txt
